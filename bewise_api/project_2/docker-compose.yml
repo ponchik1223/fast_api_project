@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  db_users:
+    container_name: db_users
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=root2
+      - POSTGRES_USER=admin2
+    image: postgres:15.3-alpine
